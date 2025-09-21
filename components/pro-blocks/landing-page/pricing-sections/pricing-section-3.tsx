@@ -16,38 +16,51 @@ import { VariantProps } from "class-variance-authority";
 const pricingData = {
   plans: [
     {
-      name: "AI Fundamentals",
+      name: "Starter",
       description:
-        "Perfect for beginners who want to get started with AI tools and concepts.",
+        "Perfect for individuals starting their AI career journey.",
       features: [
-        { name: "4-week program", tooltip: "Comprehensive introduction to AI" },
+        { name: "Monthly AI career masterclass", tooltip: "AI for resumes, job search, workflows" },
         {
-          name: "Basic AI tools training",
-          tooltip: "Learn essential AI applications",
+          name: "Weekly AI hacks",
+          tooltip: "Practical tools for work + personal productivity",
         },
-        { name: "Certificate of completion", tooltip: "Recognized certification" },
-        { name: "Community access", tooltip: "Join our learning community" },
+        { name: "Access to career resource library", tooltip: "Templates and guides" },
       ],
-      price: 299,
-      period: "/person",
+      price: 39,
+      period: "/month",
       variant: "outline",
+      currency: "$39/mo (RM99 / S$59)",
     },
     {
-      name: "AI Mastery",
+      name: "Career Accelerator",
       description:
-        "Comprehensive program for professionals seeking advanced AI skills.",
+        "For professionals ready to accelerate their career growth with AI.",
       features: [
-        { name: "8-week intensive program", tooltip: "Deep dive into AI applications" },
-        { name: "Advanced prompt engineering", tooltip: "Master AI communication" },
-        { name: "Productivity optimization", tooltip: "3x-10x productivity gains" },
-        { name: "1-on-1 mentoring sessions", tooltip: "Personalized guidance" },
-        { name: "Lifetime community access", tooltip: "Ongoing support and updates" },
-        { name: "Job placement assistance", tooltip: "Career advancement support" },
+        { name: "All Starter features", tooltip: "Everything from the Starter plan" },
+        { name: "Resume + job application with AI", tooltip: "Stand out in applications" },
+        { name: "Presentation & communication with AI", tooltip: "Professional communication skills" },
+        { name: "Community + quarterly AMA", tooltip: "Peer support and expert sessions" },
       ],
-      price: 799,
-      period: "/person",
+      price: 59,
+      period: "/month",
       variant: "default",
       highlighted: true,
+      currency: "$59/mo (RM149 / S$89)",
+    },
+    {
+      name: "Pro Growth Pack",
+      description:
+        "For ambitious professionals targeting leadership roles.",
+      features: [
+        { name: "All Accelerator features", tooltip: "Everything from Career Accelerator" },
+        { name: "Exclusive promotion toolkit", tooltip: "Strategy guides + case study templates" },
+        { name: "Access to 'AI for Leadership' sessions", tooltip: "Leadership-focused AI training" },
+      ],
+      price: 99,
+      period: "/month",
+      variant: "outline",
+      currency: "$99/mo (RM249 / S$149)",
     },
   ],
 };
@@ -64,25 +77,25 @@ export function PricingSection3() {
           {/* Section Header */}
           <div className="section-title-gap-lg flex max-w-xl flex-col items-center text-center">
             {/* Category Tag */}
-            <Tagline>Workshop Programs</Tagline>
+            <Tagline>For Individuals</Tagline>
             {/* Main Title */}
             <h2
               id="pricing-section-title-3"
               className="heading-lg text-foreground"
             >
-              AI Workshop Programs for Every Learning Journey
+              Choose Your Career Growth Plan
             </h2>
           </div>
 
-          {/* Two-Column Side-by-Side Pricing Cards - Stacks on mobile */}
-          <div className="flex w-full flex-col items-center gap-4 md:max-w-3xl md:flex-row md:gap-0">
+          {/* Three-Column Pricing Cards - Stacks on mobile */}
+          <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-3 lg:max-w-6xl">
             {pricingData.plans.map((plan, index) => (
               <Card
                 key={plan.name}
-                className={`p-6 shadow-none sm:p-12 md:rounded-tl-xl md:rounded-tr-none md:rounded-br-none md:rounded-bl-xl md:border-r-0 ${
+                className={`p-6 shadow-none sm:p-8 rounded-xl ${
                   plan.highlighted
-                    ? "shadow-[0px_0px_0px_6px_rgba(7,46,106,0.05)] md:rounded-xl md:border-r-1"
-                    : ""
+                    ? "ring-2 ring-primary shadow-lg"
+                    : "border"
                 }`}
               >
                 {/* Card Content Container */}
@@ -104,12 +117,12 @@ export function PricingSection3() {
                     </div>
 
                     {/* Price Display with Currency and Period */}
-                    <div className="flex items-end gap-0.5">
+                    <div className="flex flex-col gap-1">
                       <span className="text-4xl font-semibold">
                         ${plan.price}
                       </span>
-                      <span className="text-muted-foreground text-base">
-                        {pricingData.plans[index].period ?? "/month"}
+                      <span className="text-muted-foreground text-sm">
+                        {plan.currency || `$${plan.price}${plan.period}`}
                       </span>
                     </div>
 
@@ -122,7 +135,7 @@ export function PricingSection3() {
                       }
                       className="w-full"
                     >
-                      Enroll Now
+                      🚀 Join the Career Growth Club Today
                     </Button>
                   </div>
 

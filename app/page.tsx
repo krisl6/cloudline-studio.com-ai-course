@@ -16,19 +16,19 @@ export default function Page() {
       <HeroSection2 />
       <LogoSection10 />
       <TestimonialsSection1
-        quote="After attending the AI workshop, I have a better understanding that Artificial Intelligence has transformed the way I work and learn. Its ability to analyze data, automate tasks, and provide smart insights boosts efficiency and innovation."
-        authorName="Tong Shi En"
-        authorRole="Audit & Tax Assistant Manager at AdrianYeo PLT"
-        avatarSrc="/TongShiEn.png"
+        quote="I landed 3 interviews in one week by using AI to upgrade my CV."
+        authorName="Sarah Chen"
+        authorRole="Marketing Professional"
+        avatarSrc="/SarahChen.png"
       />
       <BentoGrid6 />
       <FeatureSection9 />
       <StatsSection4 />
       <TestimonialsSection1
-        quote="The AI workshop completely transformed how I approach my daily tasks. I've increased my productivity by 5x and can now focus on strategic thinking rather than repetitive work. The skills I learned are invaluable."
-        authorName="Sarah Chen"
-        authorRole="Marketing Director at InnovateCorp"
-        avatarSrc="/SarahChen.png"
+        quote="My manager noticed I deliver reports twice as fast — I got promoted this quarter."
+        authorName="David Park"
+        authorRole="Business Analyst"
+        avatarSrc="/DavidPark.png"
       />
       <PricingSection3 />
       <FaqSection2 />

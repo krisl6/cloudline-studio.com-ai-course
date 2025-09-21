@@ -18,14 +18,14 @@ export function HeroSection2() {
           {/* Section Title */}
           <div className="section-title-gap-xl flex flex-col">
             {/* Tagline */}
-            <Tagline>AI Mastery Workshops</Tagline>
+            <Tagline>AI Essentials Club</Tagline>
             {/* Main Heading */}
             <h1 id="hero-heading" className="heading-xl">
-              Feeling Unprepared For The AI Era?
+              💡 Use AI Effectively — To Advance Your Career and Grow Your Business
             </h1>
             {/* Description */}
             <p className="text-muted-foreground text-base lg:text-lg">
-              Join our AI workshops designed for adults of all ages. Learn to unlock greater productivity and innovation using AI today.
+              Practical training for individuals who want better jobs and promotions — and for companies that want employees who stay ahead as industry leaders.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export function HeroSection2() {
                 <Check className="text-primary h-5 w-5" />
               </div>
               <span className="text-card-foreground text-base leading-6 font-medium">
-                Develop AI fluency to master any AI tool
+                For Individuals: Career advancement through strategic AI use
               </span>
             </div>
 
@@ -45,7 +45,7 @@ export function HeroSection2() {
                 <Check className="text-primary h-5 w-5" />
               </div>
               <span className="text-card-foreground text-base leading-6 font-medium">
-                Unlock 3x to 10x productivity & innovation
+                For Companies: Future-ready teams that drive industry leadership
               </span>
             </div>
 
@@ -54,16 +54,16 @@ export function HeroSection2() {
                 <Check className="text-primary h-5 w-5" />
               </div>
               <span className="text-card-foreground text-base leading-6 font-medium">
-                No prior AI experience required
+                Practical training with immediate workplace application
               </span>
             </div>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button>Join Workshop</Button>
+            <Button>👉 Get Started Today</Button>
             <Button variant="ghost">
-              Explore Programs
+              View Plans
               <ArrowRight />
             </Button>
           </div>
