@@ -133,9 +133,28 @@ export function PricingSection3() {
                           typeof buttonVariants
                         >["variant"]
                       }
-                      className="w-full"
+                      className="w-full hover:scale-105 transition-transform duration-200"
+                      onClick={() => {
+                        // Create Stripe checkout session
+                        fetch('/api/create-checkout-session', {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: JSON.stringify({
+                            priceId: plan.name === 'Starter' ? 'price_starter_monthly' : 
+                                    plan.name === 'Career Accelerator' ? 'price_accelerator_monthly' : 
+                                    'price_pro_monthly',
+                            planName: plan.name,
+                            planType: 'individual'
+                          })
+                        })
+                        .then(res => res.json())
+                        .then(data => {
+                          if (data.url) window.location.href = data.url;
+                        })
+                        .catch(err => console.error('Payment error:', err));
+                      }}
                     >
-                      🚀 Join the Career Growth Club Today
+                      🚀 Start Free Trial
                     </Button>
                   </div>
 
