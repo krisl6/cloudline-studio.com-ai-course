@@ -55,7 +55,7 @@ export function LpNavbar1() {
         <div className="hidden w-full flex-row justify-end gap-5 md:flex">
           <NavMenuItems />
           <Link href="#pricing">
-            <Button>Join Workshop</Button>
+            <Button>👉 Get Started Today</Button>
           </Link>
         </div>
 
@@ -64,7 +64,7 @@ export function LpNavbar1() {
           <div className="flex w-full flex-col justify-end gap-5 pb-2.5 md:hidden">
             <NavMenuItems />
             <Link href="#pricing">
-              <Button className="w-full">Join Workshop</Button>
+              <Button className="w-full">👉 Get Started Today</Button>
             </Link>
           </div>
         )}
