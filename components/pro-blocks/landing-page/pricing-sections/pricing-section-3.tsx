@@ -14,28 +14,24 @@ import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
 import { VariantProps } from "class-variance-authority";
 
 const pricingData = {
-  plans: [
+  monthlyPlans: [
     {
       name: "Starter",
-      description:
-        "Perfect for individuals starting their AI career journey.",
+      description: "Perfect for individuals starting their AI career journey.",
       features: [
         { name: "Monthly AI career masterclass", tooltip: "AI for resumes, job search, workflows" },
-        {
-          name: "Weekly AI hacks",
-          tooltip: "Practical tools for work + personal productivity",
-        },
+        { name: "Weekly AI hacks", tooltip: "Practical tools for work + personal productivity" },
         { name: "Access to career resource library", tooltip: "Templates and guides" },
       ],
       price: 39,
       period: "/month",
       variant: "outline",
       currency: "$39/mo (RM99 / S$59)",
+      stripePriceId: "price_starter_monthly",
     },
     {
       name: "Career Accelerator",
-      description:
-        "For professionals ready to accelerate their career growth with AI.",
+      description: "For professionals ready to accelerate their career growth with AI.",
       features: [
         { name: "All Starter features", tooltip: "Everything from the Starter plan" },
         { name: "Resume + job application with AI", tooltip: "Stand out in applications" },
@@ -47,11 +43,11 @@ const pricingData = {
       variant: "default",
       highlighted: true,
       currency: "$59/mo (RM149 / S$89)",
+      stripePriceId: "price_accelerator_monthly",
     },
     {
       name: "Pro Growth Pack",
-      description:
-        "For ambitious professionals targeting leadership roles.",
+      description: "For ambitious professionals targeting leadership roles.",
       features: [
         { name: "All Accelerator features", tooltip: "Everything from Career Accelerator" },
         { name: "Exclusive promotion toolkit", tooltip: "Strategy guides + case study templates" },
@@ -61,6 +57,62 @@ const pricingData = {
       period: "/month",
       variant: "outline",
       currency: "$99/mo (RM249 / S$149)",
+      stripePriceId: "price_pro_monthly",
+    },
+  ],
+  annualPlans: [
+    {
+      name: "Starter Annual",
+      description: "Perfect for individuals - Save 25% with annual billing",
+      features: [
+        { name: "Monthly AI career masterclass", tooltip: "AI for resumes, job search, workflows" },
+        { name: "Weekly AI hacks", tooltip: "Practical tools for work + personal productivity" },
+        { name: "Access to career resource library", tooltip: "Templates and guides" },
+        { name: "25% annual discount", tooltip: "Save $117 per year" },
+      ],
+      price: 351,
+      originalPrice: 468,
+      period: "/year",
+      variant: "outline",
+      currency: "$351/year (was $468)",
+      paymentMethod: "bank_transfer",
+      savings: "$117",
+    },
+    {
+      name: "Career Accelerator Annual",
+      description: "Accelerate your growth - Save 25% with annual billing",
+      features: [
+        { name: "All Starter features", tooltip: "Everything from the Starter plan" },
+        { name: "Resume + job application with AI", tooltip: "Stand out in applications" },
+        { name: "Presentation & communication with AI", tooltip: "Professional communication skills" },
+        { name: "Community + quarterly AMA", tooltip: "Peer support and expert sessions" },
+        { name: "25% annual discount", tooltip: "Save $177 per year" },
+      ],
+      price: 531,
+      originalPrice: 708,
+      period: "/year",
+      variant: "default",
+      highlighted: true,
+      currency: "$531/year (was $708)",
+      paymentMethod: "bank_transfer",
+      savings: "$177",
+    },
+    {
+      name: "Pro Growth Annual",
+      description: "Leadership development - Save 25% with annual billing",
+      features: [
+        { name: "All Accelerator features", tooltip: "Everything from Career Accelerator" },
+        { name: "Exclusive promotion toolkit", tooltip: "Strategy guides + case study templates" },
+        { name: "Access to 'AI for Leadership' sessions", tooltip: "Leadership-focused AI training" },
+        { name: "25% annual discount", tooltip: "Save $297 per year" },
+      ],
+      price: 891,
+      originalPrice: 1188,
+      period: "/year",
+      variant: "outline",
+      currency: "$891/year (was $1,188)",
+      paymentMethod: "bank_transfer",
+      savings: "$297",
     },
   ],
 };

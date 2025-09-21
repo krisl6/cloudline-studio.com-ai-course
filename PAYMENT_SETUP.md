@@ -1,13 +1,13 @@
-# 💳 Payment Integration Setup Guide
+# 💳 Hybrid Payment System Setup Guide
 
 ## 🚀 Quick Start
 
-Your AI Essentials Club website now has **complete Stripe payment integration** with:
+Your AI Essentials Club website now has a **complete hybrid payment system** with:
+- ✅ **Monthly Plans**: Stripe integration with 7-day free trials
+- ✅ **Annual Plans**: Bank transfer with 25% discount (zero fees!)
 - ✅ Mobile-optimized copy and animations
-- ✅ Recurring monthly subscriptions
-- ✅ 7-day free trials
+- ✅ Professional invoicing system
 - ✅ Automatic webhook handling
-- ✅ Success/failure pages
 
 ## 📋 Setup Steps
 
